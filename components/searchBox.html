@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SearchBox 搜索栏 | zrx-admin-ui-2.0</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/zrx-admin-ui/logo.png">
+    <meta name="description" content="用于中睿信PC端管理系统的UI组件库">
+    
+    <link rel="preload" href="/zrx-admin-ui/assets/css/0.styles.cb58feb7.css" as="style"><link rel="preload" href="/zrx-admin-ui/assets/js/app.bfb1aa49.js" as="script"><link rel="preload" href="/zrx-admin-ui/assets/js/2.b0c34375.js" as="script"><link rel="preload" href="/zrx-admin-ui/assets/js/96.6b993ace.js" as="script"><link rel="prefetch" href="/zrx-admin-ui/assets/js/10.4c5cf8d7.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/100.5e82057c.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/101.678c6da1.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/102.4e6c0d58.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/103.49135f00.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/104.bb57d173.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/105.0335161d.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/106.a8c5bb68.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/107.8ba5f33a.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/108.3e3d6d13.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/109.c4902a39.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/11.dae0f2e8.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/110.546334ea.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/111.491af0f9.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/112.b4b43872.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/113.d7ff215c.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/114.f7f1a71d.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/12.7a44d57f.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/13.9b724b4d.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/14.bf0514a1.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/15.d75d9edd.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/16.96066fd2.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/17.af74dc73.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/18.e12fbb66.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/19.afa50b6d.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/20.42a44c31.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/21.1f864f3f.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/22.863cf055.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/23.7468b792.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/24.38e75ca3.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/25.64a061fc.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/26.f1ee7204.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/27.4d98e49b.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/28.7ca2390f.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/29.4956a8c8.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/3.1df63698.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/30.17ca1e83.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/31.803c73fd.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/32.81708f9e.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/33.cb19d1f5.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/34.3f918337.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/35.53c175fc.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/36.9e94c579.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/37.2c781a88.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/38.91dbbdee.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/39.340f0452.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/4.a19a382d.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/40.512cd68f.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/41.7c4ef3e0.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/42.1803a14e.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/43.0e24fb4d.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/44.b30cebff.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/45.7ff60600.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/46.1e0d5c4e.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/47.79a3590a.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/48.ccaec2ce.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/49.0b7ef93f.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/5.8da9e723.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/50.28ba7461.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/51.570b759a.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/52.00d7c54a.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/53.95b1c97e.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/54.f117e6c7.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/55.389bd030.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/56.7792183f.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/57.f04eb834.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/58.0addf6da.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/59.7475f3f2.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/6.6ce938b3.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/60.74eaf9e2.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/61.7ba656a8.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/62.c96d1b1e.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/63.7189109f.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/64.a4d18624.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/65.6883bf94.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/66.f26bdd12.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/67.89176bba.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/68.c636496e.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/69.21221d33.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/7.ee5fd8b7.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/70.e8120722.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/71.d3b88092.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/72.5d47a284.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/73.1ecece3a.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/74.c709ba6e.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/75.41a6cda5.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/76.f0218765.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/77.01ef27eb.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/78.972a3ec7.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/79.98ce6696.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/8.9212b2e9.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/80.ab6a93b7.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/81.0bd3b07c.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/82.d4687137.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/83.b548670b.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/84.c83b394c.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/85.a9f7fb04.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/86.8198a62c.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/87.a21ab369.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/88.0429860c.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/89.d7c97d03.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/9.882f7c28.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/90.64cc57d8.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/91.80362373.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/92.31e39515.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/93.08701c91.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/94.806e7ddd.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/95.5688a8d9.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/97.a5a8fa3c.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/98.3c364df9.js"><link rel="prefetch" href="/zrx-admin-ui/assets/js/99.26a2583e.js">
+    <link rel="stylesheet" href="/zrx-admin-ui/assets/css/0.styles.cb58feb7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zrx-admin-ui/" class="home-link router-link-active"><img src="/zrx-admin-ui/logo.png" alt="zrx-admin-ui-2.0" class="logo"> <span class="site-name can-hide">zrx-admin-ui-2.0</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zrx-admin-ui/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/zrx-admin-ui/getting-started/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="v1.0.x" class="dropdown-title"><span class="title">v1.0.x</span> <span class="arrow down"></span></button> <button type="button" aria-label="v1.0.x" class="mobile-dropdown-title"><span class="title">v1.0.x</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.5.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.5.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.4.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.4.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.3.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.3.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.2.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.2.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.1.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.1.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="http://10.10.120.20:9099/front-end/zrx-admin-ui-2.0" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zrx-admin-ui/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/zrx-admin-ui/getting-started/" class="nav-link">
+  文档
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="v1.0.x" class="dropdown-title"><span class="title">v1.0.x</span> <span class="arrow down"></span></button> <button type="button" aria-label="v1.0.x" class="mobile-dropdown-title"><span class="title">v1.0.x</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.5.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.5.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.4.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.4.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.3.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.3.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.2.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.2.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="http://10.10.120.148:12345/0.1.x/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  v0.1.x
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="http://10.10.120.20:9099/front-end/zrx-admin-ui-2.0" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zrx-admin-ui/introduce/" class="sidebar-link">简介</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/install/" class="sidebar-link">安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/getting-started/" class="sidebar-link">快速上手</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/theme.html" class="sidebar-link">主题色</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Element 组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zrx-admin-ui/components/button.html" class="sidebar-link">Button 按钮</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/tag.html" class="sidebar-link">Tag 标签</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/input.html" class="sidebar-link">Input 输入框</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/inputNumber.html" class="sidebar-link">InputNumber 计数器</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/select.html" class="sidebar-link">Select 下拉框</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/cascader.html" class="sidebar-link">Cascader 级联选择器</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/radio.html" class="sidebar-link">Radio 单选框</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/checkBox.html" class="sidebar-link">CheckBox 复选框</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/table.html" class="sidebar-link">Table 表格</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/switch.html" class="sidebar-link">Switch 开关</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/form.html" class="sidebar-link">Form 表单</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/message.html" class="sidebar-link">Message 消息提示</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/tabs.html" class="sidebar-link">Tabs 标签页</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/tree.html" class="sidebar-link">Tree 树</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/drawer.html" class="sidebar-link">Drawer 抽屉</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/dialog.html" class="sidebar-link">Dialog 对话框</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/upload.html" class="sidebar-link">Upload 上传</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/alert.html" class="sidebar-link">Alert 警告</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/loading.html" class="sidebar-link">Loading 加载</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/slider.html" class="sidebar-link">Slider 滑块</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/dropdown.html" class="sidebar-link">Dropdown 下拉菜单</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/elTimePicker.html" class="sidebar-link">TimePicker 时间选择器</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/elDatePicker.html" class="sidebar-link">DatePicker 日期选择器</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>自定义组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zrx-admin-ui/components/icon.html" class="sidebar-link">Icon 图标</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/timePicker.html" class="sidebar-link">TimePicker 时间选择器</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/datePicker.html" class="sidebar-link">DateTimePicker 日期时间选择器</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/dropTree.html" class="sidebar-link">DropTree 下拉树</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/status.html" class="sidebar-link">Status 状态标签</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/crumbNav.html" class="sidebar-link">CrumbNav 面包屑导航</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/navigation.html" class="sidebar-link">Navigation 导航栏</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/tandem.html" class="sidebar-link">Tandem 级联选择器</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/pagination.html" class="sidebar-link">Pagination 分页</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/searchBox.html" aria-current="page" class="active sidebar-link">SearchBox 搜索栏</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/tabBar.html" class="sidebar-link">TabBar 标签切换</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/tableWidgets.html" class="sidebar-link">TableWidgets 表格小组件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/viewForm.html" class="sidebar-link">ViewForm 查看表单</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/inspectTable.html" class="sidebar-link">InspectTable 查看表格</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/multipleSelect.html" class="sidebar-link">MultipleSelect 下拉多选</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/progress.html" class="sidebar-link">Progress 进度条</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/emptyState.html" class="sidebar-link">EmptyState 空态图</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/rollNumber.html" class="sidebar-link">RollNumber 数字滚动</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/tabContent.html" class="sidebar-link">TabContent 内容切换</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/password.html" class="sidebar-link">Password 密码框</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/steps.html" class="sidebar-link">Steps 步骤条</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/barChart.html" class="sidebar-link">BarChart 柱状图</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/springBox.html" class="sidebar-link">SpringBox 弹性盒</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/score.html" class="sidebar-link">Score 评分</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zrx-admin-ui/components/transfer.html" class="sidebar-link">Transfer 穿梭框</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="searchbox-搜索栏"><a href="#searchbox-搜索栏" class="header-anchor">#</a> SearchBox 搜索栏</h1> <p>用于排列列表的搜索项的自适应容器</p> <h3 id="基础用法"><a href="#基础用法" class="header-anchor">#</a> 基础用法</h3> <div class="m-example"><div tabindex="-1" class="zrx-search-box col-0" style="--row-height:0px;--column-gap:32px;--padding-x:0px;--total-height:0px;"><div class="zrx-tandem-input"><span class="label">名称</span> <div class="el-input"><!----><input type="text" autocomplete="off" placeholder="请输入" class="el-input__inner"><!----><!----><!----><!----></div></div> <div class="zrx-tandem-input"><span class="label">是否启用</span> <div class="el-select"><!----><div class="el-input el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="min-width:;display:none;"><div class="el-scrollbar" style="display:none;"><div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-select-dropdown__list"><!----><li class="el-select-dropdown__item"><span>是</span></li> <li class="el-select-dropdown__item selected"><span>否</span></li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div><p class="el-select-dropdown__empty">
+          无数据
+        </p></div></div></div> <div class="zrx-tandem-input"><span class="label">创建时间</span> <div tabindex="-1" class="zrx-date-time-picker datetimerange" data-v-1ba65453><!----> <!----> <span class="zrx-time-picker-icon svg-icon zrx-icon-calendar" data-v-1ba65453></span> <div class="range-input-value" data-v-1ba65453><input readonly="readonly" placeholder="开始日期" style="text-align:left;" data-v-1ba65453> <span class="icon" data-v-1ba65453>-</span> <input readonly="readonly" placeholder="结束日期" style="text-align:left;" data-v-1ba65453></div> <span class="active-dot" data-v-1ba65453></span> <!----> <!----> <div tabindex="-1" class="zrx-date-time-picker-panel datetimerange" data-v-1ba65453><div class="panel-header" data-v-1ba65453><i class="prev-btn svg-icon zrx-icon-double-angle-left" data-v-1ba65453></i> <i class="prev-btn svg-icon zrx-icon-left-angle" data-v-1ba65453></i> <div class="panel-header-text" data-v-1ba65453>年 1月</div> <i class="next-btn svg-icon zrx-icon-right-angle" data-v-1ba65453></i> <i class="next-btn svg-icon zrx-icon-double-angle-right" data-v-1ba65453></i></div> <div class="panel-body" data-v-1ba65453><div class="date-item week-label" data-v-1ba65453>
+                一
+            </div><div class="date-item week-label" data-v-1ba65453>
+                二
+            </div><div class="date-item week-label" data-v-1ba65453>
+                三
+            </div><div class="date-item week-label" data-v-1ba65453>
+                四
+            </div><div class="date-item week-label" data-v-1ba65453>
+                五
+            </div><div class="date-item week-label" data-v-1ba65453>
+                六
+            </div><div class="date-item week-label" data-v-1ba65453>
+                日
+            </div> </div> <div class="time-panel-header" data-v-1ba65453>
+            00:00:00
+        </div> <div class="time-panel-body" style="height:53px;" data-v-1ba65453><div class="hour el-scrollbar" data-v-1ba65453><div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><div class="el-scrollbar__view"><div class="time-item current" data-v-1ba65453>
+                    00
+                </div><div class="time-item" data-v-1ba65453>
+                    01
+                </div><div class="time-item" data-v-1ba65453>
+                    02
+                </div><div class="time-item" data-v-1ba65453>
+                    03
+                </div><div class="time-item" data-v-1ba65453>
+                    04
+                </div><div class="time-item" data-v-1ba65453>
+                    05
+                </div><div class="time-item" data-v-1ba65453>
+                    06
+                </div><div class="time-item" data-v-1ba65453>
+                    07
+                </div><div class="time-item" data-v-1ba65453>
+                    08
+                </div><div class="time-item" data-v-1ba65453>
+                    09
+                </div><div class="time-item" data-v-1ba65453>
+                    10
+                </div><div class="time-item" data-v-1ba65453>
+                    11
+                </div><div class="time-item" data-v-1ba65453>
+                    12
+                </div><div class="time-item" data-v-1ba65453>
+                    13
+                </div><div class="time-item" data-v-1ba65453>
+                    14
+                </div><div class="time-item" data-v-1ba65453>
+                    15
+                </div><div class="time-item" data-v-1ba65453>
+                    16
+                </div><div class="time-item" data-v-1ba65453>
+                    17
+                </div><div class="time-item" data-v-1ba65453>
+                    18
+                </div><div class="time-item" data-v-1ba65453>
+                    19
+                </div><div class="time-item" data-v-1ba65453>
+                    20
+                </div><div class="time-item" data-v-1ba65453>
+                    21
+                </div><div class="time-item" data-v-1ba65453>
+                    22
+                </div><div class="time-item" data-v-1ba65453>
+                    23
+                </div></div></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div> <div class="minute el-scrollbar" data-v-1ba65453><div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><div class="el-scrollbar__view"><div class="time-item current" data-v-1ba65453>
+                    00
+                </div><div class="time-item" data-v-1ba65453>
+                    01
+                </div><div class="time-item" data-v-1ba65453>
+                    02
+                </div><div class="time-item" data-v-1ba65453>
+                    03
+                </div><div class="time-item" data-v-1ba65453>
+                    04
+                </div><div class="time-item" data-v-1ba65453>
+                    05
+                </div><div class="time-item" data-v-1ba65453>
+                    06
+                </div><div class="time-item" data-v-1ba65453>
+                    07
+                </div><div class="time-item" data-v-1ba65453>
+                    08
+                </div><div class="time-item" data-v-1ba65453>
+                    09
+                </div><div class="time-item" data-v-1ba65453>
+                    10
+                </div><div class="time-item" data-v-1ba65453>
+                    11
+                </div><div class="time-item" data-v-1ba65453>
+                    12
+                </div><div class="time-item" data-v-1ba65453>
+                    13
+                </div><div class="time-item" data-v-1ba65453>
+                    14
+                </div><div class="time-item" data-v-1ba65453>
+                    15
+                </div><div class="time-item" data-v-1ba65453>
+                    16
+                </div><div class="time-item" data-v-1ba65453>
+                    17
+                </div><div class="time-item" data-v-1ba65453>
+                    18
+                </div><div class="time-item" data-v-1ba65453>
+                    19
+                </div><div class="time-item" data-v-1ba65453>
+                    20
+                </div><div class="time-item" data-v-1ba65453>
+                    21
+                </div><div class="time-item" data-v-1ba65453>
+                    22
+                </div><div class="time-item" data-v-1ba65453>
+                    23
+                </div><div class="time-item" data-v-1ba65453>
+                    24
+                </div><div class="time-item" data-v-1ba65453>
+                    25
+                </div><div class="time-item" data-v-1ba65453>
+                    26
+                </div><div class="time-item" data-v-1ba65453>
+                    27
+                </div><div class="time-item" data-v-1ba65453>
+                    28
+                </div><div class="time-item" data-v-1ba65453>
+                    29
+                </div><div class="time-item" data-v-1ba65453>
+                    30
+                </div><div class="time-item" data-v-1ba65453>
+                    31
+                </div><div class="time-item" data-v-1ba65453>
+                    32
+                </div><div class="time-item" data-v-1ba65453>
+                    33
+                </div><div class="time-item" data-v-1ba65453>
+                    34
+                </div><div class="time-item" data-v-1ba65453>
+                    35
+                </div><div class="time-item" data-v-1ba65453>
+                    36
+                </div><div class="time-item" data-v-1ba65453>
+                    37
+                </div><div class="time-item" data-v-1ba65453>
+                    38
+                </div><div class="time-item" data-v-1ba65453>
+                    39
+                </div><div class="time-item" data-v-1ba65453>
+                    40
+                </div><div class="time-item" data-v-1ba65453>
+                    41
+                </div><div class="time-item" data-v-1ba65453>
+                    42
+                </div><div class="time-item" data-v-1ba65453>
+                    43
+                </div><div class="time-item" data-v-1ba65453>
+                    44
+                </div><div class="time-item" data-v-1ba65453>
+                    45
+                </div><div class="time-item" data-v-1ba65453>
+                    46
+                </div><div class="time-item" data-v-1ba65453>
+                    47
+                </div><div class="time-item" data-v-1ba65453>
+                    48
+                </div><div class="time-item" data-v-1ba65453>
+                    49
+                </div><div class="time-item" data-v-1ba65453>
+                    50
+                </div><div class="time-item" data-v-1ba65453>
+                    51
+                </div><div class="time-item" data-v-1ba65453>
+                    52
+                </div><div class="time-item" data-v-1ba65453>
+                    53
+                </div><div class="time-item" data-v-1ba65453>
+                    54
+                </div><div class="time-item" data-v-1ba65453>
+                    55
+                </div><div class="time-item" data-v-1ba65453>
+                    56
+                </div><div class="time-item" data-v-1ba65453>
+                    57
+                </div><div class="time-item" data-v-1ba65453>
+                    58
+                </div><div class="time-item" data-v-1ba65453>
+                    59
+                </div></div></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div> <div class="second el-scrollbar" data-v-1ba65453><div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><div class="el-scrollbar__view"><div class="time-item current" data-v-1ba65453>
+                    00
+                </div><div class="time-item" data-v-1ba65453>
+                    01
+                </div><div class="time-item" data-v-1ba65453>
+                    02
+                </div><div class="time-item" data-v-1ba65453>
+                    03
+                </div><div class="time-item" data-v-1ba65453>
+                    04
+                </div><div class="time-item" data-v-1ba65453>
+                    05
+                </div><div class="time-item" data-v-1ba65453>
+                    06
+                </div><div class="time-item" data-v-1ba65453>
+                    07
+                </div><div class="time-item" data-v-1ba65453>
+                    08
+                </div><div class="time-item" data-v-1ba65453>
+                    09
+                </div><div class="time-item" data-v-1ba65453>
+                    10
+                </div><div class="time-item" data-v-1ba65453>
+                    11
+                </div><div class="time-item" data-v-1ba65453>
+                    12
+                </div><div class="time-item" data-v-1ba65453>
+                    13
+                </div><div class="time-item" data-v-1ba65453>
+                    14
+                </div><div class="time-item" data-v-1ba65453>
+                    15
+                </div><div class="time-item" data-v-1ba65453>
+                    16
+                </div><div class="time-item" data-v-1ba65453>
+                    17
+                </div><div class="time-item" data-v-1ba65453>
+                    18
+                </div><div class="time-item" data-v-1ba65453>
+                    19
+                </div><div class="time-item" data-v-1ba65453>
+                    20
+                </div><div class="time-item" data-v-1ba65453>
+                    21
+                </div><div class="time-item" data-v-1ba65453>
+                    22
+                </div><div class="time-item" data-v-1ba65453>
+                    23
+                </div><div class="time-item" data-v-1ba65453>
+                    24
+                </div><div class="time-item" data-v-1ba65453>
+                    25
+                </div><div class="time-item" data-v-1ba65453>
+                    26
+                </div><div class="time-item" data-v-1ba65453>
+                    27
+                </div><div class="time-item" data-v-1ba65453>
+                    28
+                </div><div class="time-item" data-v-1ba65453>
+                    29
+                </div><div class="time-item" data-v-1ba65453>
+                    30
+                </div><div class="time-item" data-v-1ba65453>
+                    31
+                </div><div class="time-item" data-v-1ba65453>
+                    32
+                </div><div class="time-item" data-v-1ba65453>
+                    33
+                </div><div class="time-item" data-v-1ba65453>
+                    34
+                </div><div class="time-item" data-v-1ba65453>
+                    35
+                </div><div class="time-item" data-v-1ba65453>
+                    36
+                </div><div class="time-item" data-v-1ba65453>
+                    37
+                </div><div class="time-item" data-v-1ba65453>
+                    38
+                </div><div class="time-item" data-v-1ba65453>
+                    39
+                </div><div class="time-item" data-v-1ba65453>
+                    40
+                </div><div class="time-item" data-v-1ba65453>
+                    41
+                </div><div class="time-item" data-v-1ba65453>
+                    42
+                </div><div class="time-item" data-v-1ba65453>
+                    43
+                </div><div class="time-item" data-v-1ba65453>
+                    44
+                </div><div class="time-item" data-v-1ba65453>
+                    45
+                </div><div class="time-item" data-v-1ba65453>
+                    46
+                </div><div class="time-item" data-v-1ba65453>
+                    47
+                </div><div class="time-item" data-v-1ba65453>
+                    48
+                </div><div class="time-item" data-v-1ba65453>
+                    49
+                </div><div class="time-item" data-v-1ba65453>
+                    50
+                </div><div class="time-item" data-v-1ba65453>
+                    51
+                </div><div class="time-item" data-v-1ba65453>
+                    52
+                </div><div class="time-item" data-v-1ba65453>
+                    53
+                </div><div class="time-item" data-v-1ba65453>
+                    54
+                </div><div class="time-item" data-v-1ba65453>
+                    55
+                </div><div class="time-item" data-v-1ba65453>
+                    56
+                </div><div class="time-item" data-v-1ba65453>
+                    57
+                </div><div class="time-item" data-v-1ba65453>
+                    58
+                </div><div class="time-item" data-v-1ba65453>
+                    59
+                </div></div></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div></div> <div class="panel-footer" data-v-1ba65453><button type="button" class="el-button datetimerange-panel-btn el-button--primary" data-v-1ba65453><!----><!----><span>确定</span></button></div></div></div></div> <div class="zrx-tandem-input"><span class="label">审批时间</span> <div tabindex="-1" class="zrx-time-picker" data-v-655cfe5c><input readonly="readonly" placeholder="请选择" style="text-align:left;" data-v-655cfe5c> <i class="svg-icon zrx-icon-clock" style="opacity:1;" data-v-655cfe5c></i> <span class="clear-btn svg-icon zrx-icon-close-round hide" data-v-655cfe5c></span> <div tabindex="-1" class="zrx-time-picker-panel repeat-3" data-v-655cfe5c><div class="hour el-scrollbar" data-v-655cfe5c><div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><div class="el-scrollbar__view"><div class="time-item" data-v-655cfe5c>
+                    00
+                </div><div class="time-item" data-v-655cfe5c>
+                    01
+                </div><div class="time-item" data-v-655cfe5c>
+                    02
+                </div><div class="time-item" data-v-655cfe5c>
+                    03
+                </div><div class="time-item" data-v-655cfe5c>
+                    04
+                </div><div class="time-item" data-v-655cfe5c>
+                    05
+                </div><div class="time-item" data-v-655cfe5c>
+                    06
+                </div><div class="time-item" data-v-655cfe5c>
+                    07
+                </div><div class="time-item" data-v-655cfe5c>
+                    08
+                </div><div class="time-item" data-v-655cfe5c>
+                    09
+                </div><div class="time-item" data-v-655cfe5c>
+                    10
+                </div><div class="time-item" data-v-655cfe5c>
+                    11
+                </div><div class="time-item" data-v-655cfe5c>
+                    12
+                </div><div class="time-item" data-v-655cfe5c>
+                    13
+                </div><div class="time-item" data-v-655cfe5c>
+                    14
+                </div><div class="time-item" data-v-655cfe5c>
+                    15
+                </div><div class="time-item" data-v-655cfe5c>
+                    16
+                </div><div class="time-item" data-v-655cfe5c>
+                    17
+                </div><div class="time-item" data-v-655cfe5c>
+                    18
+                </div><div class="time-item" data-v-655cfe5c>
+                    19
+                </div><div class="time-item" data-v-655cfe5c>
+                    20
+                </div><div class="time-item" data-v-655cfe5c>
+                    21
+                </div><div class="time-item" data-v-655cfe5c>
+                    22
+                </div><div class="time-item" data-v-655cfe5c>
+                    23
+                </div></div></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div> <div class="minute el-scrollbar" data-v-655cfe5c><div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><div class="el-scrollbar__view"><div class="time-item" data-v-655cfe5c>
+                    00
+                </div><div class="time-item" data-v-655cfe5c>
+                    01
+                </div><div class="time-item" data-v-655cfe5c>
+                    02
+                </div><div class="time-item" data-v-655cfe5c>
+                    03
+                </div><div class="time-item" data-v-655cfe5c>
+                    04
+                </div><div class="time-item" data-v-655cfe5c>
+                    05
+                </div><div class="time-item" data-v-655cfe5c>
+                    06
+                </div><div class="time-item" data-v-655cfe5c>
+                    07
+                </div><div class="time-item" data-v-655cfe5c>
+                    08
+                </div><div class="time-item" data-v-655cfe5c>
+                    09
+                </div><div class="time-item" data-v-655cfe5c>
+                    10
+                </div><div class="time-item" data-v-655cfe5c>
+                    11
+                </div><div class="time-item" data-v-655cfe5c>
+                    12
+                </div><div class="time-item" data-v-655cfe5c>
+                    13
+                </div><div class="time-item" data-v-655cfe5c>
+                    14
+                </div><div class="time-item" data-v-655cfe5c>
+                    15
+                </div><div class="time-item" data-v-655cfe5c>
+                    16
+                </div><div class="time-item" data-v-655cfe5c>
+                    17
+                </div><div class="time-item" data-v-655cfe5c>
+                    18
+                </div><div class="time-item" data-v-655cfe5c>
+                    19
+                </div><div class="time-item" data-v-655cfe5c>
+                    20
+                </div><div class="time-item" data-v-655cfe5c>
+                    21
+                </div><div class="time-item" data-v-655cfe5c>
+                    22
+                </div><div class="time-item" data-v-655cfe5c>
+                    23
+                </div><div class="time-item" data-v-655cfe5c>
+                    24
+                </div><div class="time-item" data-v-655cfe5c>
+                    25
+                </div><div class="time-item" data-v-655cfe5c>
+                    26
+                </div><div class="time-item" data-v-655cfe5c>
+                    27
+                </div><div class="time-item" data-v-655cfe5c>
+                    28
+                </div><div class="time-item" data-v-655cfe5c>
+                    29
+                </div><div class="time-item" data-v-655cfe5c>
+                    30
+                </div><div class="time-item" data-v-655cfe5c>
+                    31
+                </div><div class="time-item" data-v-655cfe5c>
+                    32
+                </div><div class="time-item" data-v-655cfe5c>
+                    33
+                </div><div class="time-item" data-v-655cfe5c>
+                    34
+                </div><div class="time-item" data-v-655cfe5c>
+                    35
+                </div><div class="time-item" data-v-655cfe5c>
+                    36
+                </div><div class="time-item" data-v-655cfe5c>
+                    37
+                </div><div class="time-item" data-v-655cfe5c>
+                    38
+                </div><div class="time-item" data-v-655cfe5c>
+                    39
+                </div><div class="time-item" data-v-655cfe5c>
+                    40
+                </div><div class="time-item" data-v-655cfe5c>
+                    41
+                </div><div class="time-item" data-v-655cfe5c>
+                    42
+                </div><div class="time-item" data-v-655cfe5c>
+                    43
+                </div><div class="time-item" data-v-655cfe5c>
+                    44
+                </div><div class="time-item" data-v-655cfe5c>
+                    45
+                </div><div class="time-item" data-v-655cfe5c>
+                    46
+                </div><div class="time-item" data-v-655cfe5c>
+                    47
+                </div><div class="time-item" data-v-655cfe5c>
+                    48
+                </div><div class="time-item" data-v-655cfe5c>
+                    49
+                </div><div class="time-item" data-v-655cfe5c>
+                    50
+                </div><div class="time-item" data-v-655cfe5c>
+                    51
+                </div><div class="time-item" data-v-655cfe5c>
+                    52
+                </div><div class="time-item" data-v-655cfe5c>
+                    53
+                </div><div class="time-item" data-v-655cfe5c>
+                    54
+                </div><div class="time-item" data-v-655cfe5c>
+                    55
+                </div><div class="time-item" data-v-655cfe5c>
+                    56
+                </div><div class="time-item" data-v-655cfe5c>
+                    57
+                </div><div class="time-item" data-v-655cfe5c>
+                    58
+                </div><div class="time-item" data-v-655cfe5c>
+                    59
+                </div></div></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div> <div class="second el-scrollbar" data-v-655cfe5c><div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><div class="el-scrollbar__view"><div class="time-item" data-v-655cfe5c>
+                    00
+                </div><div class="time-item" data-v-655cfe5c>
+                    01
+                </div><div class="time-item" data-v-655cfe5c>
+                    02
+                </div><div class="time-item" data-v-655cfe5c>
+                    03
+                </div><div class="time-item" data-v-655cfe5c>
+                    04
+                </div><div class="time-item" data-v-655cfe5c>
+                    05
+                </div><div class="time-item" data-v-655cfe5c>
+                    06
+                </div><div class="time-item" data-v-655cfe5c>
+                    07
+                </div><div class="time-item" data-v-655cfe5c>
+                    08
+                </div><div class="time-item" data-v-655cfe5c>
+                    09
+                </div><div class="time-item" data-v-655cfe5c>
+                    10
+                </div><div class="time-item" data-v-655cfe5c>
+                    11
+                </div><div class="time-item" data-v-655cfe5c>
+                    12
+                </div><div class="time-item" data-v-655cfe5c>
+                    13
+                </div><div class="time-item" data-v-655cfe5c>
+                    14
+                </div><div class="time-item" data-v-655cfe5c>
+                    15
+                </div><div class="time-item" data-v-655cfe5c>
+                    16
+                </div><div class="time-item" data-v-655cfe5c>
+                    17
+                </div><div class="time-item" data-v-655cfe5c>
+                    18
+                </div><div class="time-item" data-v-655cfe5c>
+                    19
+                </div><div class="time-item" data-v-655cfe5c>
+                    20
+                </div><div class="time-item" data-v-655cfe5c>
+                    21
+                </div><div class="time-item" data-v-655cfe5c>
+                    22
+                </div><div class="time-item" data-v-655cfe5c>
+                    23
+                </div><div class="time-item" data-v-655cfe5c>
+                    24
+                </div><div class="time-item" data-v-655cfe5c>
+                    25
+                </div><div class="time-item" data-v-655cfe5c>
+                    26
+                </div><div class="time-item" data-v-655cfe5c>
+                    27
+                </div><div class="time-item" data-v-655cfe5c>
+                    28
+                </div><div class="time-item" data-v-655cfe5c>
+                    29
+                </div><div class="time-item" data-v-655cfe5c>
+                    30
+                </div><div class="time-item" data-v-655cfe5c>
+                    31
+                </div><div class="time-item" data-v-655cfe5c>
+                    32
+                </div><div class="time-item" data-v-655cfe5c>
+                    33
+                </div><div class="time-item" data-v-655cfe5c>
+                    34
+                </div><div class="time-item" data-v-655cfe5c>
+                    35
+                </div><div class="time-item" data-v-655cfe5c>
+                    36
+                </div><div class="time-item" data-v-655cfe5c>
+                    37
+                </div><div class="time-item" data-v-655cfe5c>
+                    38
+                </div><div class="time-item" data-v-655cfe5c>
+                    39
+                </div><div class="time-item" data-v-655cfe5c>
+                    40
+                </div><div class="time-item" data-v-655cfe5c>
+                    41
+                </div><div class="time-item" data-v-655cfe5c>
+                    42
+                </div><div class="time-item" data-v-655cfe5c>
+                    43
+                </div><div class="time-item" data-v-655cfe5c>
+                    44
+                </div><div class="time-item" data-v-655cfe5c>
+                    45
+                </div><div class="time-item" data-v-655cfe5c>
+                    46
+                </div><div class="time-item" data-v-655cfe5c>
+                    47
+                </div><div class="time-item" data-v-655cfe5c>
+                    48
+                </div><div class="time-item" data-v-655cfe5c>
+                    49
+                </div><div class="time-item" data-v-655cfe5c>
+                    50
+                </div><div class="time-item" data-v-655cfe5c>
+                    51
+                </div><div class="time-item" data-v-655cfe5c>
+                    52
+                </div><div class="time-item" data-v-655cfe5c>
+                    53
+                </div><div class="time-item" data-v-655cfe5c>
+                    54
+                </div><div class="time-item" data-v-655cfe5c>
+                    55
+                </div><div class="time-item" data-v-655cfe5c>
+                    56
+                </div><div class="time-item" data-v-655cfe5c>
+                    57
+                </div><div class="time-item" data-v-655cfe5c>
+                    58
+                </div><div class="time-item" data-v-655cfe5c>
+                    59
+                </div></div></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div> <!----> <div class="panel-footer" data-v-655cfe5c><button disabled="disabled" type="button" class="el-button el-button--primary is-disabled" data-v-655cfe5c><!----><!----><span>
+                确定
+            </span></button></div></div></div></div> <div class="zrx-tandem-input"><span class="label">所属部门</span> <div tabindex="-1" show-checkbox="" class="zrx-drop-tree"><div class="wrapper"><!----> <!----> <p class="placeholder" style="display:;">请选择</p></div> <!----> <a class="btn btn-toggle"><i class="icon svg-icon zrx-icon-down-angle"></i></a> <div tabindex="-1" placement="" class="zrx-drop-tree-dropper" style="display:none;"><!----> <div class="tree-content"><div role="tree" class="el-tree"><div class="el-tree__empty-block"><span class="el-tree__empty-text">暂无数据</span></div><div class="el-tree__drop-indicator" style="display:none;"></div></div></div></div></div></div> <div class="zrx-tandem-input"><span class="label">区划层级</span> <div role="group" aria-label="checkbox-group" class="el-checkbox-group"><label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="false" value="镇" class="el-checkbox__original"></span><span class="el-checkbox__label">镇</span></label> <label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="false" value="村" class="el-checkbox__original"></span><span class="el-checkbox__label">村</span></label> <label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="false" value="街道" class="el-checkbox__original"></span><span class="el-checkbox__label">街道</span></label></div></div>  <div class="secondary-btns"><button type="button" class="el-button el-button--primary"><!----><!----><span>查询</span></button> <button type="button" class="el-button el-button--default"><!----><!----><span>重置</span></button> <!----></div></div></div> <details class="custom-block details"><summary>示例代码</summary> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>zrx-search-box</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>inputer<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>名称<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请输入<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>formData.name<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>是否启用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-select</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>formData.enable<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请选择<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>是<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-option</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>否<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-option</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-select</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>创建时间<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>zrx-date-time-picker</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>formData.timetimeRange<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>datetimerange<span class="token punctuation">&quot;</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>yyyy-MM-dd HH:mm:ss<span class="token punctuation">&quot;</span></span> <span class="token attr-name">rangeSeparator</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>-<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:clearable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>false<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>zrx-date-time-picker</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>审批时间<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>zrx-time-picker</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>formData.timestamp<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请选择<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>zrx-time-picker</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>所属部门<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>zrx-drop-tree</span> <span class="token attr-name">:data</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>treeData<span class="token punctuation">&quot;</span></span> <span class="token attr-name">popper-append-to-body</span> <span class="token attr-name">:props</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{ label: <span class="token punctuation">'</span>name<span class="token punctuation">'</span> }<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>formData.department<span class="token punctuation">&quot;</span></span> <span class="token attr-name">show-checkbox</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>zrx-drop-tree</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>区划层级<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-checkbox-group</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>formData.district<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-checkbox</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>镇<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-checkbox</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-checkbox</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>村<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-checkbox</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-checkbox</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>街道<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-checkbox</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-checkbox-group</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>primary<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>查询<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span><span class="token punctuation">&gt;</span></span>重置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>zrx-search-box</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                <span class="token literal-property property">treeData</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+                        <span class="token literal-property property">parentId</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+                        <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'5bbfb0fb33e6432aa499f5ddb801163b'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">parentId</span><span class="token operator">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'一级节点1'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">sort</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">disabled</span><span class="token operator">:</span> <span class="token boolean">true</span>
+                            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'d966b79460be4734a78d6f53d4037e84'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">parentId</span><span class="token operator">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'一级节点2'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">sort</span><span class="token operator">:</span> <span class="token number">2</span>
+                            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'b169cbd13e154d53b199afb1dceeaeee'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">parentId</span><span class="token operator">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'一级节点3'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">sort</span><span class="token operator">:</span> <span class="token number">3</span>
+                            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'aa946ffcf7bb4b03821dee3c75aa4ea2'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">parentId</span><span class="token operator">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                                    <span class="token punctuation">{</span>
+                                        <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'d7f354df24bb4166be3c09b20561ad8e'</span><span class="token punctuation">,</span>
+                                        <span class="token literal-property property">parentId</span><span class="token operator">:</span> <span class="token string">'aa946ffcf7bb4b03821dee3c75aa4ea2'</span><span class="token punctuation">,</span>
+                                        <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                                            <span class="token punctuation">{</span>
+                                                <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'11112f1d487945a097a0ba5ff1f21273'</span><span class="token punctuation">,</span>
+                                                <span class="token literal-property property">parentId</span><span class="token operator">:</span> <span class="token string">'d7f354df24bb4166be3c09b20561ad8e'</span><span class="token punctuation">,</span>
+                                                <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                                <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'三级节点1'</span><span class="token punctuation">,</span>
+                                                <span class="token literal-property property">sort</span><span class="token operator">:</span> <span class="token number">0</span>
+                                            <span class="token punctuation">}</span>
+                                        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                        <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'二级节点1'</span><span class="token punctuation">,</span>
+                                        <span class="token literal-property property">sort</span><span class="token operator">:</span> <span class="token number">0</span>
+                                    <span class="token punctuation">}</span>
+                                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'一级节点4'</span><span class="token punctuation">,</span>
+                                <span class="token literal-property property">sort</span><span class="token operator">:</span> <span class="token number">4</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                        <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'全部'</span><span class="token punctuation">,</span>
+                        <span class="token literal-property property">sort</span><span class="token operator">:</span> <span class="token number">0</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">formData</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">enable</span><span class="token operator">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">timetimeRange</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">timestamp</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">department</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">district</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>formData<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">''</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>formData<span class="token punctuation">.</span>enable <span class="token operator">=</span> <span class="token string">'0'</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>formData<span class="token punctuation">.</span>timetimeRange <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>formData<span class="token punctuation">.</span>timestamp <span class="token operator">=</span> <span class="token keyword">null</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>formData<span class="token punctuation">.</span>department <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>formData<span class="token punctuation">.</span>district <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details> <h3 id="响应内容变化"><a href="#响应内容变化" class="header-anchor">#</a> 响应内容变化</h3> <div class="m-example"><div tabindex="-1" class="zrx-search-box col-0" style="--row-height:0px;--column-gap:32px;--padding-x:0px;--total-height:0px;"> <div class="zrx-tandem-input"><span class="label">流程标题</span> <div class="el-input"><!----><input type="text" autocomplete="off" placeholder="请输入" class="el-input__inner"><!----><!----><!----><!----></div></div> <div class="zrx-tandem-input"><span class="label">显示剩余</span> <div class="el-select"><!----><div class="el-input el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="min-width:;display:none;"><div class="el-scrollbar" style="display:none;"><div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-select-dropdown__list"><!----><li class="el-select-dropdown__item selected"><span>否</span></li> <li class="el-select-dropdown__item"><span>是</span></li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div><p class="el-select-dropdown__empty">
+          无数据
+        </p></div></div></div> <!---->  <div class="secondary-btns"><button type="button" class="el-button el-button--primary"><!----><!----><span>查询</span></button> <button type="button" class="el-button el-button--default"><!----><!----><span>重置</span></button> <!----></div></div></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>searchBox 内置了对组件内部元素变化的响应，但某些情况下响应不会自动触发，此时，在变化完成后，需要调用<code>resetWhenChildChange</code>对组件进行重置</p></div> <details class="custom-block details"><summary>示例代码</summary> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>zrx-search-box</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>searchbox<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>流程标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请输入<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>显示剩余<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-select</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请选择<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@change</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>onChange<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-option</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>否<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-option</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-option</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>是<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-option</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-select</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.type==<span class="token punctuation">'</span>2<span class="token punctuation">'</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>流程编号<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.code<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请输入<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>申请人<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.creator<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请输入<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>primary<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>查询<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span><span class="token punctuation">&gt;</span></span>重置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>zrx-search-box</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                <span class="token literal-property property">search</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">creator</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">''</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>searchbox<span class="token punctuation">.</span><span class="token function">resetWhenChildChange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details> <h3 id="自定义折叠-展开"><a href="#自定义折叠-展开" class="header-anchor">#</a> 自定义折叠/展开</h3> <p>不使用默认的折叠/展开</p> <div class="m-example"><div tabindex="-1" class="zrx-search-box col-0" style="--row-height:0px;--column-gap:32px;--padding-x:0px;--total-height:0px;"> <div class="zrx-tandem-input"><span class="label">流程标题</span> <div class="el-input"><!----><input type="text" autocomplete="off" placeholder="请输入" class="el-input__inner"><!----><!----><!----><!----></div></div> <div class="zrx-tandem-input"><span class="label">显示剩余</span> <div class="el-select"><!----><div class="el-input el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="min-width:;display:none;"><div class="el-scrollbar" style="display:none;"><div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><ul class="el-scrollbar__view el-select-dropdown__list"><!----><li class="el-select-dropdown__item selected"><span>否</span></li> <li class="el-select-dropdown__item"><span>是</span></li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="width:0;transform:translateX(0%);ms-transform:translateX(0%);webkit-transform:translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="height:0;transform:translateY(0%);ms-transform:translateY(0%);webkit-transform:translateY(0%);"></div></div></div><p class="el-select-dropdown__empty">
+          无数据
+        </p></div></div></div> <!---->  <div class="secondary-btns"><button type="button" class="el-button el-button--primary"><!----><!----><span>查询</span></button> <button type="button" class="el-button el-button--default"><!----><!----><span>重置</span></button> <a class="btn"><i class="zrx-icon-draw-hook"><i></i> <i></i></i></a></div></div></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>使用默认的折叠/展开逻辑可能会导致内部元素的遮挡（如下拉框）。可开启<code>prevent-default-toggle</code>，自己实现折叠/展开逻辑，此时的组件类似简单的布局容器，不提供除样式外的其他控制。</p></div> <details class="custom-block details"><summary>示例代码</summary> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>zrx-search-box</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>searchbox<span class="token punctuation">&quot;</span></span> <span class="token attr-name">prevent-default-toggle</span> <span class="token attr-name">@change</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>$event =&gt; (stretched = $event)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>流程标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请输入<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>显示剩余<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-select</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:popper-append-to-body</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>false<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请选择<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-option</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>否<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-option</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-option</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>是<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-option</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-select</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stretched<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>流程编号<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.code<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请输入<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zrx-tandem-input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>申请人<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>search.creator<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请输入<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>primary<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>查询<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span><span class="token punctuation">&gt;</span></span>重置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>zrx-search-box</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                <span class="token literal-property property">search</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">creator</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+                    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">''</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">stretched</span><span class="token operator">:</span> <span class="token boolean">false</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></details> <h3 id="attributes"><a href="#attributes" class="header-anchor">#</a> Attributes</h3> <table><thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td><code>initial-expand</code></td> <td>组件初始化是否展开</td> <td>Boolean</td> <td>—</td> <td>false</td></tr> <tr><td><code>padding-x</code></td> <td>组件左右两侧边距</td> <td>String, Number</td> <td>—</td> <td>16</td></tr> <tr><td><code>min-input-width</code></td> <td>最小输入框宽度</td> <td>String, Number</td> <td>—</td> <td>270</td></tr> <tr><td><code>column-gap</code></td> <td>组件内部的列间隔</td> <td>String, Number</td> <td>—</td> <td>32</td></tr> <tr><td><code>prevent-default-toggle</code></td> <td>是否阻止内置的折叠/展开行为</td> <td>Boolean</td> <td>—</td> <td>false</td></tr> <tr><td><code>show-toggler</code></td> <td>是否使用内置的折叠/展开按钮</td> <td>Boolean</td> <td>—</td> <td>true</td></tr></tbody></table> <h3 id="methods"><a href="#methods" class="header-anchor">#</a> Methods</h3> <table><thead><tr><th>方法名称</th> <th>说明</th> <th>参数</th></tr></thead> <tbody><tr><td><code>resetWhenChildChange</code></td> <td>使组件重新布局</td> <td>—</td></tr> <tr><td><code>focus</code></td> <td>使组件聚焦</td> <td>—</td></tr></tbody></table> <h3 id="events"><a href="#events" class="header-anchor">#</a> Events</h3> <table><thead><tr><th>事件名称</th> <th>说明</th> <th>回调参数</th></tr></thead> <tbody><tr><td><code>transitionend</code></td> <td>过渡完成回调</td> <td>{ stretched, height }, originEvent</td></tr> <tr><td><code>change</code></td> <td>折叠/展开的回调</td> <td>是否展开</td></tr></tbody></table> <h3 id="slots"><a href="#slots" class="header-anchor">#</a> Slots</h3> <table><thead><tr><th>name</th> <th>说明</th></tr></thead> <tbody><tr><td><code>inputer</code></td> <td>搜索项插槽</td></tr> <tr><td>—</td> <td>默认插槽</td></tr> <tr><td><code>btn</code></td> <td>按钮插槽</td></tr></tbody></table> <div><div class="m-contributor" data-v-11f4320a><p data-v-11f4320a>维护者</p> <p data-v-11f4320a>贡献者</p> <p data-v-11f4320a><img src="/zrx-admin-ui/assets/img/agua.e6f3918c.png" alt data-v-11f4320a></p> <p data-v-11f4320a><img src="/zrx-admin-ui/assets/img/agua.e6f3918c.png" alt data-v-11f4320a></p></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/17/2023, 5:27:25 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/zrx-admin-ui/components/pagination.html" class="prev">
+        Pagination 分页
+      </a></span> <span class="next"><a href="/zrx-admin-ui/components/tabBar.html">
+        TabBar 标签切换
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/zrx-admin-ui/assets/js/app.bfb1aa49.js" defer></script><script src="/zrx-admin-ui/assets/js/2.b0c34375.js" defer></script><script src="/zrx-admin-ui/assets/js/96.6b993ace.js" defer></script>
+  </body>
+</html>
